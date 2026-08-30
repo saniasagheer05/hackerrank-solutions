@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-08-30, 11:26 p.m.
+# Technique   single-pointer-subsequence-scan
+# Time        O(n)
+# Space       O(1)
+# Insight     The algorithm maintains a pointer to the target string and advances it only when the current character in the input string matches the character at the pointer's position.
+# Interview   Before: I would use a frequency map to count characters. After: Since order matters, I use a single pointer to track the subsequence progress in O(n) time, ensuring we find all characters of 'hackerrank' in sequence.
+# Pitfalls    (1) Failing to check if the pointer j has reached the end of the target string before accessing target[j].  (2) Returning YES prematurely if the target string is found before the end of the input string s.
 # ──────────────────────────────────────────────────
 
 def hackerrankInString(s):
