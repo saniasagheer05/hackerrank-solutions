@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-09-16, 02:28 p.m.
+# Technique   linear-scan-counter
+# Time        O(n)
+# Space       O(1)
+# Insight     The algorithm iterates through the array once to count occurrences of positive, negative, and zero values, then calculates their respective ratios relative to the total array length.
+# Interview   Before: "I will use a hash map to store counts." After: "A simple linear scan with three counters is more efficient, achieving O(n) time and O(1) space, which is optimal for this problem."
+# Pitfalls    (1) Failure to format the output to exactly six decimal places as required by the problem statement.  (2) Integer division in languages other than Python might truncate the result to zero before floating-point conversion.
 # ──────────────────────────────────────────────────
 
 
