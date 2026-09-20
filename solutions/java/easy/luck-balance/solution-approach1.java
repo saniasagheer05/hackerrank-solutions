@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-09-20, 08:45 p.m.
+// Technique   greedy-sorting-important-contests
+// Time        O(N log N)
+// Space       O(N)
+// Insight     The algorithm maximizes luck by losing all unimportant contests and the k largest important contests, while winning the remaining important contests to minimize the luck penalty.
+// Interview   Before: "I would use a priority queue to track the smallest important contests." After: "Sorting the important contests in descending order allows an O(N log N) greedy selection, where the first k elements are added and the rest are subtracted to satisfy the constraint on important contest losses."
+// Pitfalls    (1) Failing to account for the requirement that important contests exceeding the limit k must be won, which subtracts their luck value from the total.  (2) Incorrectly sorting the important contests in ascending order instead of descending order, which would cause the algorithm to subtract the largest values instead of the smallest.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
