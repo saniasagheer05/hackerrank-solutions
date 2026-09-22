@@ -7,6 +7,11 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-09-22, 11:47 p.m.
+# Technique   string-slicing-and-conditional-logic
+# Time        O(1)
+# Space       O(1)
+# Insight     The algorithm isolates the period and hour components to apply modular arithmetic adjustments, mapping 12-hour cycles to 24-hour military time format.
+# Pitfalls    (1) Failing to handle the 12:00:00AM case, which must map to 00:00:00 instead of 12:00:00.  (2) Incorrectly adding 12 to the hour for 12:00:00PM, which should remain 12:00:00.  (3) Forgetting to format the resulting hour with a leading zero using :02d to maintain the required string length.
 # ──────────────────────────────────────────────────
 
 def timeConversion(s):
