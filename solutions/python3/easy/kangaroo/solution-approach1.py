@@ -6,7 +6,7 @@
 # Platform    HackerRank
 # Language    python3
 # Status      Accepted
-# Submitted   2026-09-23, 08:24 p.m.
+# Submitted   2026-09-23, 08:28 p.m.
 # ──────────────────────────────────────────────────
 
 def kangaroo(x1, v1, x2, v2):
