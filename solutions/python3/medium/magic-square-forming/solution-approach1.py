@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-10-01, 09:23 p.m.
+# Technique   brute-force-precomputed-magic-squares
+# Time        O(1)
+# Space       O(1)
+# Insight     The algorithm calculates the absolute difference between the input matrix and all eight possible 3x3 magic squares, selecting the minimum total cost.
+# Interview   Before: "How would you find the minimal cost to transform a 3x3 matrix into a magic square?" After: "Since there are only eight distinct 3x3 magic squares, we can precompute them and compare the input against each in O(1) time, as the input size is fixed at 3x3."
+# Pitfalls    (1) Failing to account for all eight possible rotations and reflections of the 3x3 magic square.  (2) Incorrectly calculating the absolute difference for each cell, which must be summed to find the total cost per candidate.
 # ──────────────────────────────────────────────────
 
 def formingMagicSquare(s):
