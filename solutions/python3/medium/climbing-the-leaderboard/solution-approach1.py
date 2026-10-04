@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-10-04, 11:56 p.m.
+# Technique   unique-list-two-pointers
+# Time        O(n + m)
+# Space       O(n)
+# Insight     The algorithm reduces the leaderboard to unique scores and uses a pointer that traverses the unique list in reverse to determine the rank for each ascending player score.
+# Interview   Before: "I would use binary search for each player score." After: "Since player scores are ascending, I can use a two-pointer approach to achieve O(n + m) time complexity, which is more efficient than repeated binary searches."
+# Pitfalls    (1) Failing to handle duplicate scores in the leaderboard, which violates the dense ranking rule.  (2) Incorrectly calculating the rank index when the player score exceeds all existing leaderboard scores.  (3) Assuming the leaderboard is already unique, which contradicts the problem statement's example.
 # ──────────────────────────────────────────────────
 
 def climbingLeaderboard(ranked, player):
