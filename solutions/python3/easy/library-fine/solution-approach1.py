@@ -7,12 +7,6 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-10-15, 11:23 p.m.
-# Technique   hierarchical-conditional-date-comparison
-# Time        O(1)
-# Space       O(1)
-# Insight     The algorithm evaluates lateness by checking the most significant time unit first, ensuring that only the least precise measure of lateness determines the fine.
-# Interview   Before: "I would calculate the total days difference between the two dates." After: "That approach is unnecessary because the problem defines specific, non-overlapping fine tiers. I used a hierarchical conditional structure to check year, then month, then day, resulting in O(1) time complexity and handling the fixed year-late fine correctly."
-# Pitfalls    (1) Failing to prioritize the year check, which incorrectly calculates a fine for early returns in later years.  (2) Incorrectly applying the 15-Hacko multiplier to months or years instead of just days.  (3) Returning a non-zero fine when the return date is before the due date, violating the rule that no fine is charged for on-time returns.
 # ──────────────────────────────────────────────────
 
 
