@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-10-19, 12:15 a.m.
+# Technique   directional-ray-casting-with-set
+# Time        O(k + n)
+# Space       O(k)
+# Insight     The algorithm calculates the maximum possible distance in each of the eight directions and then reduces those distances by checking for obstacles along each ray.
+# Interview   Before: "I would iterate through every cell on the board to check if the queen can attack it." After: "That is inefficient for large boards. Instead, I calculate the maximum distance in each of the eight directions and subtract the distance to the nearest obstacle, resulting in O(k + n) time complexity."
+# Pitfalls    (1) Failing to account for the 1-based indexing of the chessboard, which can lead to incorrect distance calculations.  (2) Assuming obstacles are sorted, which is not guaranteed by the problem statement and would break the logic if relied upon.  (3) Neglecting to handle the case where multiple obstacles exist on the same ray, which the code correctly manages by breaking at the first encountered obstacle.
 # ──────────────────────────────────────────────────
 
 
