@@ -7,12 +7,6 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-10-20, 01:40 p.m.
-# Technique   nested-loop-bit-comparison
-# Time        O(n^2 * m)
-# Space       O(1)
-# Insight     The algorithm iterates through all unique pairs of attendees and computes the bitwise OR of their topic strings to determine the total number of known subjects.
-# Interview   Before: "I would use a hash map to count topic frequencies." After: "Since we need to compare every pair of attendees, an O(n^2 * m) approach is necessary to check all combinations, where n is the number of attendees and m is the number of topics."
-# Pitfalls    (1) Failing to initialize the max_topics counter to zero, which would cause incorrect results if all teams know zero topics.  (2) Using an incorrect inner loop range for j, which must start at i + 1 to avoid comparing an attendee with themselves or counting the same pair twice.  (3) Assuming bitwise operations on strings are faster than manual character comparison, which is not necessarily true in Python without converting to integers.
 # ──────────────────────────────────────────────────
 
 
