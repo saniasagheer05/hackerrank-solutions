@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-10-22, 12:08 a.m.
+# Technique   grid-column-traversal
+# Time        O(L)
+# Space       O(L)
+# Insight     The algorithm calculates grid dimensions based on the square root of the string length and extracts characters column-wise to form the encrypted message.
+# Interview   Before: "How would you map a linear string into a 2D grid for column-based encryption?" After: "I remove spaces and determine dimensions using floor and ceil of the square root, ensuring rows times columns covers the length. This O(L) approach iterates through columns to collect characters, handling the grid bounds with index checks."
+# Pitfalls    (1) Failing to handle the case where rows times columns is less than the string length by incrementing rows.  (2) Incorrectly calculating the index as row times rows instead of row times columns during column traversal.  (3) Including spaces in the string length calculation, which violates the requirement to remove them first.
 # ──────────────────────────────────────────────────
 
 
