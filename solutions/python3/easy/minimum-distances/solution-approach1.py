@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-11-12, 01:27 a.m.
+# Technique   hash-map-last-seen-index
+# Time        O(n)
+# Space       O(n)
+# Insight     The algorithm maintains a hash map of the most recent index for each element encountered, updating the minimum distance whenever a duplicate is found.
+# Interview   Before: "I could use nested loops to compare every pair, but that is O(n^2)." After: "I can use a hash map to store the last seen index of each element, allowing me to find the minimum distance in O(n) time and O(n) space, returning -1 if no duplicates exist."
+# Pitfalls    (1) Failing to handle the case where no duplicates exist, which requires returning -1 instead of infinity.  (2) Updating the last_seen index before calculating the distance, which would incorrectly result in a distance of zero.
 # ──────────────────────────────────────────────────
 
 #!/bin/python3
